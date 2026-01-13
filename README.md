@@ -2,16 +2,16 @@
 
 https://booksrecommendationsystem-afghvonxhuqmm4mwkkopqm.streamlit.app/
 
-## 📌 Project Objective
+## Project Objective
 This project is a Machine Learning application designed to recommend books to users based on content similarity. Unlike simple popularity-based systems, this engine analyzes book titles, authors, and publishers using Natural Language Processing (NLP) techniques to find the most relevant matches.
 
-## 📂 Dataset Used
+## Dataset Used
 The system uses the **Book-Crossing Dataset** (subset):
 - `BX-Books.csv`: Contains book information (ISBN, Title, Author, Year, Publisher).
 - `BX-Users.csv`: Anonymous user data (ID, Location, Age) - *Used for future hybrid filtering*.
 - `BX-Book-Ratings-Subset.csv`: User ratings - *Used for future hybrid filtering*.
 
-## 🧠 Algorithm: TF-IDF & Cosine Similarity
+## Algorithm: TF-IDF & Cosine Similarity
 The core recommendation logic is based on **Content-Based Filtering**:
 
 1.  **Feature Engineering**: We combine `Book-Title`, `Book-Author`, and `Publisher` into a single text feature.
@@ -22,7 +22,7 @@ The core recommendation logic is based on **Content-Based Filtering**:
     - Calculates the angle between vectors to determine similarity.
     - A score of 1.0 means identical content, while 0.0 means no similarity.
 
-## 🚀 How to Run the Project
+## How to Run the Project
 
 ### Prerequisites
 - Python 3.12+
@@ -45,7 +45,7 @@ streamlit run app.py
 ```
 The app will open in your browser at `http://localhost:8501`.
 
-## 🔮 Future Scope
+## Future Scope
 - **Hybrid Filtering**: Combine Collaborative Filtering (User Ratings) with Content-Based Filtering.
 - **Deep Learning**: Use Neural Networks for feature extraction.
 - **Enhanced UI**: Add more interactive elements and book reviews.
