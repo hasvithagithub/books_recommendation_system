@@ -24,8 +24,9 @@ def load_recommender(data):
     # We use a subset of data for performance in this demo if the dataset is huge
     # For full project, use full data or better hardware/optimization
     # Taking top 10000 books for speed in 'mini project' scope
-    if len(data) > 20000:
-        data_subset = data.head(20000).copy()
+    # Taking top 5000 books for speed and memory efficiency in Cloud environment
+    if len(data) > 5000:
+        data_subset = data.head(5000).copy()
     else:
         data_subset = data.copy()
         
